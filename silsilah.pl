@@ -1,3 +1,4 @@
+#inisialisasi jenis kelamin laki-laki
 lakilaki(ismail).
 lakilaki(jamal).
 lakilaki(taebdjakarta).
@@ -13,6 +14,7 @@ lakilaki(dedy).
 lakilaki(daffa).
 lakilaki(bibie).
 
+#inisialisasi jenis kelamin perempuan
 perempuan(saraha).
 perempuan(yulianti).
 perempuan(dahniar).
@@ -27,6 +29,7 @@ perempuan(wulan).
 perempuan(sarah).
 perempuan(maun).
 
+#inisialisasi pernikahan
 menikah(ismail,saraha).
 menikah(jamal,yulianti).
 menikah(taebdjakarta,dahniar).
@@ -35,6 +38,7 @@ menikah(anto,darlina).
 menikah(sulaiman,atik).
 menikah(ridwan,rosmeti).
 
+#inisialisasi anak
 anak(taebdjakarta,ismail).
 
 anak(dahniar,jamal).
@@ -61,6 +65,7 @@ anak(bibie,ridwan).
 anak(sarah,ridwan).
 anak(maun,ridwan).
 
+#formula
 orangtua(A,B,C):-anak(A,B), menikah(B,C).
 kakeknenek(A,D,E) :-anak(A,B), anak(B,D), menikah(D,E);anak(A,B),menikah(B,C),anak(C,D),menikah(D,E).
 kakek(A,D):-anak(A,B), anak(B,D),menikah(D,E);anak(A,B),menikah(B,C),anak(C,D),menikah(D,E).
